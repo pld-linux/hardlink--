@@ -1,4 +1,5 @@
 Summary:	Rewrite in C++ of the hardlink utility
+Summary(pl.UTF-8):	Narzędzie hardlink przepisane w C++
 Name:		hardlink++
 Version:	0.02
 Release:	3
@@ -17,6 +18,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A rewrite in C++ of the hardlink utility, which recursively parses
 directory structures and creates hard links for identical files found.
 
+%description -l pl.UTF-8
+Ten pakiet zawiera przepisane w C++ narzędzie hardlink, rekurencyjnie
+analizujące struktury katalogów i tworzące twarde dowiązania dla
+znalezionych identycznych plików.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -26,7 +32,7 @@ directory structures and creates hard links for identical files found.
 %build
 %{__make} \
 	CXX="%{__cxx}" \
-	CXXFLAGS="%{optflags}"
+	CXXFLAGS="%{rpmcxxflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
