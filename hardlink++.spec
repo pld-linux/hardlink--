@@ -12,6 +12,7 @@ Patch1:		%{name}-sane-makefile.patch
 Patch2:		%{name}-gcc34-optimize-help.patch
 URL:		http://www.sodarock.com/hardlink/
 BuildRequires:	libstdc++-devel
+BuildRequires:	rpmbuild(macros) >= 1.167
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
